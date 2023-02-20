@@ -1,0 +1,37 @@
+rules:
+  - rule: greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+  - rule: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+  - rule: query knowledge base
+    steps:
+      - intent: query_knowledge_base
+      - action: action_query_knowledge_base
+  - rule: bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+  - rule: rules
+    steps:
+      - intent: rules
+      - action: utter_rules
+  - rule: reserve
+    steps:
+      - intent: reserve
+      - action: utter_reserve
+  - rule: events
+    steps:
+      - intent: events
+      - action: utter_events
+  - rule: thank
+    steps:
+      - intent: thank
+      - action: utter_thank
+  - rule: opening_hours
+    steps:
+      - intent: opening_hours
+      - action: utter_opening_hours

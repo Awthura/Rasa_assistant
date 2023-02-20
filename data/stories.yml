@@ -1,0 +1,33 @@
+stories:
+  - story: all functions
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: bot_challenge
+    - action: utter_iamabot
+    - intent: rules
+    - action: utter_rules
+    - intent: events
+    - action: utter_events
+    - intent: opening_hours
+    - action: utter_opening_hours
+    - intent: query_knowledge_base
+    - action: action_query_knowledge_base
+    - intent: reserve
+    - action: utter_reserve
+    - intent: thank
+    - action: utter_thank
+    - intent: goodbye
+    - action: utter_goodbye
+
+  - story: greet & query knowledge base
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: query_knowledge_base
+    - action: action_query_knowledge_base
+
+  - story: query knowledge base
+    steps:
+    - intent: query_knowledge_base
+    - action: action_query_knowledge_base

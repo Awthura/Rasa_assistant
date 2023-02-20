@@ -1,0 +1,1117 @@
+version: "3.1"
+nlu:
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - who are you?
+      - what are you?
+      - what's your name?
+      - are you a robot?
+      - introduce yourself
+      - please introdruce yourself
+
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - good morning
+      - good evening
+      - hey there
+
+  - intent: events
+    examples: |
+      - Can you tell me the upcoming events for the library ?
+      - Do you have any upcoming events?
+      - May I know upcoming library events?
+      - Do you have any events that I can attend?
+      - What about upcoming library events?
+
+  - intent: thank
+    examples: |
+      - thanks
+      - thank you
+      - thank you very much
+      - thanks for your help
+      - danke
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you around
+      - see you later
+
+  - intent: reserve
+    examples: |
+      - can you put this book on hold?
+      - can I order the second book?
+      - can you keep this book for me?
+      - can I reserve the third please?
+      - Can you hold this book for me?
+      - Can I place an order for this book?
+      - Can you keep this book aside for me?
+      - Can I make a reservation for this book?
+      - Can you save the fourth book for me?
+      - Can I pre-order this book?
+      - Can you set this book aside for me?
+      - Can I request this book?
+      - Can you reserve this book for me?
+      - Can I hold this book for pickup?
+
+  - intent: opening_hours
+    examples: |
+      - What are the opening hours of the library?
+      - Is the library open on Saturdays?
+      - Is the library open tomorrow?
+      - What are your opening hours?
+      - Can you tell me the opening hours of the library?
+      - When does the library open?
+      - may I know the opening hours?
+
+  - intent: rules
+    examples: |
+      - Can you tell me the rules & regulations of the library?
+      - What are the rules that students need to follow in the library?
+      - List the library rules.
+      - Explain the library rules and regulations for the students.
+      - How should we behave in the library?
+      - Please tell me the library rules
+
+  - intent: query_knowledge_base
+    examples: |
+      - Do you have the [book](object_type) [Stratford-on-Avon](name)?
+      - Do you have the [book](object_type) [A royal pet](name)?
+      - Can you find the [book](object_type) [Advancements in fuzzy reliability theory](name) for me?
+      - Can you find the [book](object_type) [Addressing issues of systemic racism during turbulent times](name) for me?
+      - Can I get the [book](object_type) [Innovative perspectives on tourism discourse](name)?
+      - Can you check the availability of the [book](object_type) [Stratford-on-Avon](name)?
+      - I'm interested in the [book](object_type) [A royal pet](name), can you tell me more about it?
+      - Can you tell me if the [book](object_type) [Advancements in fuzzy reliability theory](name) is currently in stock?
+      - Could you check if the [book](object_type) [Addressing issues of systemic racism during turbulent times](name) is available?
+      - Can you let me know if the [book](object_type) [Innovative perspectives on tourism discourse](name) is on the shelves?
+      - Can you check if the [book](object_type) [Agricultural finance and opportunities for investment and expansion](name) is available for check out?
+      - Can you tell me if the [book](object_type) [Alginates](name) is in the library collection?
+      - Do you have the book [Agricultural management strategies in a changing economy](name)?
+      - The [book](object_type) [A little book of eternal wisdom](name)
+      - The [book](object_type) [Archaeology of the Hunter-Gatherers of the Central Mountains of Tierra del Fuego](name)
+      - The [book](object_type) [Bioluminescence](name)
+      - The [book](object_type) [Proceedings of the 4th Global Summit of Research Institutes for Disaster Risk Reduction](name)
+      - The [book](object_type) [Vitamin K](name)
+      - The [book](object_type) [Urban Design in Seismic-Prone Regions](name)
+      - The [book](object_type) [The widow and her son](name)     
+      - The [book](object_type) [Island tourism](name)     
+      - The [book](object_type) [2019-20 MATRIX Annals](name)     
+      - The [book](object_type) [Chikungunya virus](name)     
+      - The [book](object_type) [Emerging Topics in Modeling Interval-Censored Survival Data](name)     
+      - The [book](object_type) [The Geography of Contemporary China](name)     
+      - The [book](object_type) [HIT or Miss for the Student](name)     
+      - The [book](object_type) [Neurotechnology for biomimetic robots](name)     
+      - The [book](object_type) [Maps of Quality of Life in Argentina Since the 19th Century](name)     
+      - The [book](object_type) [The book of tea](name)     
+      - The [book](object_type) [Sustainability and management](name)     
+      - The [book](object_type) [The Geography of Uzbekistan](name)     
+      - The [book](object_type) [The Westside Barbell book of methods](name)     
+      - The [book](object_type) [Oxidoreductase](name)     
+      - The [book](object_type) [Ecosystem-Based Disaster and Climate Resilience](name)     
+      - The [book](object_type) [Ship Operation Technology](name)     
+      - The [book](object_type) [Advances and applications in deep learning](name)     
+      - The [book](object_type) [Glutathione system and oxidative stress in health and disease](name)     
+      - The [book](object_type) [Self-driving vehicles and enabling technologies](name)     
+      - The [book](object_type) [Hidden Geographies](name)     
+      - The [book](object_type) [The woman suffrage year book](name)     
+      - The [book](object_type) [Pectins](name)     
+      - The [book](object_type) [Chemical properties of starch](name)     
+      - The [book](object_type) [Starch](name)     
+      - The [book](object_type) [The big book of virtual teambuilding games](name)     
+      - The [book](object_type) [British festivals](name)     
+      - The [book](object_type) [DNA methylation mechanism](name)     
+      - The [book](object_type) [The marketing book](name)     
+      - The [book](object_type) [Urban Crime Prevention](name)     
+      - The [book](object_type) [Keratin](name)     
+      - The [book](object_type) [Plant stress physiology](name)     
+      - The [book](object_type) [Persistent Organic Pollutants (POPs)](name)     
+      - The [book](object_type) [Fibroblasts](name)     
+      - The [book](object_type) [Essential oils](name)     
+      - The [book](object_type) [Leadership in a changing world](name)     
+      - The [book](object_type) [Big data-enabled internet of things](name)     
+      - The [book](object_type) [The book of Job](name)
+      - The [book](object_type) [Engineering creative design in robotics and mechatronics](name) 
+      - The [book](object_type) [Mechanics of robotic manipulation](name)    
+      - The [book](object_type) [Human microbiome](name)       
+      - The [book](object_type) [Pneumonia](name)     
+      - The [book](object_type) [Germany](name)     
+      - The [book](object_type) [The future of health economics](name)     
+      - The [book](object_type) [Fourth Places](name)     
+      - The [book](object_type) [The Internet of Things and Big Data Analytics](name)     
+      - The [book](object_type) [Periodontology](name)     
+      - The [book](object_type) [Vitamin E in health and disease](name)     
+      - The [book](object_type) [Benzimidazole](name)     
+      - The [book](object_type) [Nature-based tourism, environment, and land management](name)     
+      - The [book](object_type) [Protein kinases](name)     
+      - The [book](object_type) [Environmental impacts of ecotourism](name)     
+      - The [book](object_type) [Extracellular matrix](name)     
+      - The [book](object_type) [Oral health by using probiotic products](name)
+      - The [book](object_type) [London antiques](name)  
+      - the [book](object_type) [Multinational enterprise management strategies in developing countries](name)   
+      - what [books]{"entity": "object_type", "value": "book"} can you recommend?
+      - list some [books]{"entity": "object_type", "value": "book"}
+      - Recommend me a [book](object_type)
+      - Recommend me another [book](object_type)
+      - Can you recommend me another [book](object_type)
+      - recommend me a random [book](object_type)
+      - recommend me some [books]{"entity": "object_type", "value": "book"}
+      - recommend me random [books]{"entity": "object_type", "value": "book"}
+      - recommend me a couple of [books]{"entity": "object_type", "value": "book"}
+      - recommend me a bunch of [books]{"entity": "object_type", "value": "book"}
+      - recommend me a few [books]{"entity": "object_type", "value": "book"}
+      - Recommend me one [book] (object_type)
+      - Recommend me two [books]{"entity": "object_type", "value": "book"}
+      - Recommend me three [books]{"entity": "object_type", "value": "book"}
+      - Recommend me four [books]{"entity": "object_type", "value": "book"}
+      - Recommend me five [books]{"entity": "object_type", "value": "book"}
+      - can you recommend me some [books]{"entity": "object_type", "value": "book"} please?
+      - can you list me some suitable [books]{"entity": "object_type", "value": "book"} to study?
+      - recommend me other [Engineering](category) [books]{"entity": "object_type", "value": "book"}
+      - please recommend me another [Engineering](category) [book](object_type)
+      - please recommend me another [English](category) [book](object_type)
+      - list [English](category) [books]{"entity": "object_type", "value": "book"}
+      - list an [English](category) [book](object_type)
+      - recommend me more [English](category) [books]{"entity": "object_type", "value": "book"}
+      - [English](category) [books]{"entity": "object_type", "value": "book"}
+      - [Engineering](category) [books]{"entity": "object_type", "value": "book"}
+      - [Business](category) [books]{"entity": "object_type", "value": "book"}
+      - [Marketing](category) [books]{"entity": "object_type", "value": "book"}
+      - [Environment](category) [books]{"entity": "object_type", "value": "book"}
+      - [Miscellaneous](category) [books]{"entity": "object_type", "value": "book"}
+      - do you have any [Engineering](category) [books]{"entity": "object_type", "value": "book"}?
+      - do you have [books]{"entity": "object_type", "value": "book"} in [Miscellaneous category]{"entity": "category", "value": "Miscellaneous"}?
+      - do you have [Miscellaneous](category) [books]{"entity": "object_type", "value": "book"}?
+      - what [category](attribute) is [it](mention)?
+      - do you know what [category](attribute) the [last one]{"entity": "mention", "value": "LAST"} is?
+      - Can you tell me the [category](attribute) of [Academic knowledge construction and multimodal curriculum development](name)?
+      - what [category](attribute) is [it](mention) under?
+      - What is the [category](attribute) of the [last one]{"entity": "mention", "value": "LAST"}?
+      - What is the [category](attribute) of the [last book]{"entity": "mention", "value": "LAST"}?
+      - What is the [category](attribute) of the [first one]{"entity": "mention", "value": "1"}?
+      - What is the [category](attribute) of the [first book]{"entity": "mention", "value": "1"}?
+      - What is the [category](attribute) of the [second one]{"entity": "mention", "value": "2"}?
+      - What is the [category](attribute) of the [second book]{"entity": "mention", "value": "2"}?
+      - What is the [category](attribute) of the [third one]{"entity": "mention", "value": "3"}?
+      - What is the [category](attribute) of the [third book]{"entity": "mention", "value": "3"}?
+      - What is the [category](attribute) of the [fourth one]{"entity": "mention", "value": "4"}?
+      - What is the [category](attribute) of the [fourth book]{"entity": "mention", "value": "4"}?
+      - Can you tell me the [category](attribute) of [that book](mention)?
+      - Do you have any [books]{"entity": "object_type", "value": "book"} in the [Business category]{"entity": "category", "value": "Business"}?
+      - Do you have any [books]{"entity": "object_type", "value": "book"} in the [Miscellaneous category]{"entity": "category", "value": "Miscellaneous"}?
+      - Do you also have any [Business](category) [books]{"entity": "object_type", "value": "book"}?
+      - What about [Business](category) [books]{"entity": "object_type", "value": "book"}?
+      - What about any [Engineering](category) [books]{"entity": "object_type", "value": "book"}?
+      - What about any [Marketing](category) [books]{"entity": "object_type", "value": "book"}?
+      - Do you also know some [books]{"entity": "object_type", "value": "book"} about [Environment](category)?
+      - do you know the [author](attribute) of [that book](mention)?
+      - do you know the [author](attribute) of [this book](mention)?
+      - Do you have any [books]{"entity": "object_type", "value": "book"} by [Paul Dummett]{"entity": "author", "value": "Paul Dummett"}?
+      - what is the [author](attribute) of [Progressive engineering practices in marine resource management](name)?
+      - who is the [author](attribute) of [Strategies for student support during a global crisis](name)?
+      - who is the [author](attribute) of [In company - pre-intermediate](name)?
+      - Can you find the [author](attribute) of [AIDS book review journal](name) for me?
+      - Can you tell me the [author](attribute) of [Alginates](name)?
+      - May I know the [author](attribute) of [American hand book of the daguerreotype](name)?
+      - Can you get me the [author](attribute) of [An integrated introduction to computer graphics and geometric modeling](name) for me?
+      - Can you tell me the [author](attribute) of [Analyzing current and future global trends in populism](name)?
+      - Can you find the [author](attribute) of [Analyzing the economics of financial market infrastructures](name) for me?
+      - Can you tell me the [author](attribute) of [Anil Aggrawal's internet journal of book reviews](name)?
+      - Can you find the [author](attribute) of [Animals feed science and nutrition](name) for me?
+      - Can you tell me [author](attribute) [Agricultural finance and opportunities for investment and expansion](name)?
+      - [Who wrote]{"entity": "attribute", "value": "author"} [Resilient Smart Cities](name)?
+      - [Who wrote]{"entity": "attribute", "value": "author"} [Environmental impacts on underground power distribution](name)?
+      - [Who wrote]{"entity": "attribute", "value": "author"} [Oxford English for electrical and mechanical engineering](name)?
+      - [Who wrote]{"entity": "attribute", "value": "author"} [China Internet Development Report 2019](name)?
+      - [Who wrote]{"entity": "attribute", "value": "author"} [Green production strategies for sustainability](name)?
+      - [Who wrote]{"entity": "attribute", "value": "author"} [the second one]{"entity": "mention", "value": "2"}?
+      - [Who wrote]{"entity": "attribute", "value": "author"} [the second book]{"entity": "mention", "value": "2"}?
+      - [Who wrote]{"entity": "attribute", "value": "author"} [the first one]{"entity": "mention", "value": "1"}?
+      - [Who wrote]{"entity": "attribute", "value": "author"} [the first book]{"entity": "mention", "value": "1"}?
+      - [Who wrote]{"entity": "attribute", "value": "author"} [the third one]{"entity": "mention", "value": "3"}?
+      - [Who wrote]{"entity": "attribute", "value": "author"} [the third book]{"entity": "mention", "value": "3"}?
+      - [Who wrote]{"entity": "attribute", "value": "author"} [the last one]{"entity": "mention", "value": "LAST"}?
+      - [Who wrote]{"entity": "attribute", "value": "author"} [the last book]{"entity": "mention", "value": "LAST"}?
+      - Can you recommend any [books]{"entity": "object_type", "value": "book"} by [John Hughes]{"entity": "author", "value": "John Hughes"}?
+      - Can you recommend me [books]{"entity": "object_type", "value": "book"} by [Jan de Gier]{"entity": "author", "value": "Jan de Gier"}?
+      - can you tell me the [author](attribute) of [that book](mention)?
+      - When was [this book](mention) [first published]{"entity": "attribute", "value": "first-published"}?
+      - When was [that book](mention) [first published]{"entity": "attribute", "value": "first-published"}?
+      - When is [Advancements in fuzzy reliability theory](name) [first published]{"entity": "attribute", "value": "first-published"}?
+      - What is the [published year]{"entity": "attribute", "value": "first-published"} of [Success with Business](name)?
+      - When was [the book](mention) [first published]{"entity": "attribute", "value": "first-published"}?
+      - When was [it](mention) [published]{"entity": "attribute", "value": "first-published"}?
+      - When was [Prebiotics and probiotics](name) [published]{"entity": "attribute", "value": "first-published"}?
+      - Do you know the [publisher]{"entity": "attribute", "value": "Publisher"} of [that book](mention)?
+      - What is the [publisher]{"entity": "attribute", "value": "Publisher"} of [Success with BEC higher](name)?
+      - Who is the [author](attribute) of [Clinical concepts and practical management techniques in dentistry](name)?
+      - Who is the [author](attribute) of [The Geography of Uzbekistan](name)?
+      - Who is the [author](attribute) of [American hand book of the daguerreotype](name)?
+      - Who is the [author](attribute) of [Chemical properties of starch](name)?
+      - When was the [first one]{"entity": "mention", "value": "1"} [published]{"entity": "attribute", "value": "first-published"}?
+      - When was the [first book]{"entity": "mention", "value": "1"} [published]{"entity": "attribute", "value": "first-published"}?
+      - When was the [second one]{"entity": "mention", "value": "2"} [published]{"entity": "attribute", "value": "first-published"}?
+      - When was the [second book]{"entity": "mention", "value": "2"} [first published]{"entity": "attribute", "value": "first-published"}?
+      - When was the [third one]{"entity": "mention", "value": "3"} [published]{"entity": "attribute", "value": "first-published"}?
+      - When was the [third book]{"entity": "mention", "value": "3"} [published]{"entity": "attribute", "value": "first-published"}?
+      - When was the [fourth one]{"entity": "mention", "value": "4"} [published]{"entity": "attribute", "value": "first-published"}?
+      - When was the [fourth book]{"entity": "mention", "value": "4"} [first published]{"entity": "attribute", "value": "first-published"}?
+      - When was the [last one]{"entity": "mention", "value": "LAST"} [published]{"entity": "attribute", "value": "first-published"}?
+      - When was the [last book]{"entity": "mention", "value": "LAST"} [published]{"entity": "attribute", "value": "first-published"}?
+      - When was [Flip chart magic!](name) [published]{"entity": "attribute", "value": "first-published"}?
+      - When was [Visualization and verbalization of data](name) [published]{"entity": "attribute", "value": "first-published"}?
+      - When was [Assessment in Geographical Education: An International Perspective](name) [first published]{"entity": "attribute", "value": "first-published"}?
+      - When was [Handbook of research on digital citizenship and management during crises](name) [published]{"entity": "attribute", "value": "first-published"}?
+      - When was [Big data](name) [published]{"entity": "attribute", "value": "first-published"}?
+      - When was [Critical examinations of distance education transformation across disciplines](name) [published]{"entity": "attribute", "value": "first-published"}?
+      - When was [The big book of simulation modeling](name) [first published]{"entity": "attribute", "value": "first-published"}? 
+      
+  - lookup: category
+    examples: |
+      - Miscellaneous
+      - Business
+      - Engineering
+      - Marketing
+      - Environment
+      - English
+
+  - lookup: name
+    examples: |
+      - The big book of marketing
+      - Feynman and computation
+      - Narrative and discursive approaches in entrepreneurship
+      - The little book of modern verse
+      - Visualization and verbalization of data
+      - Cochrane handbook for systematic reviews of interventions
+      - Tourism in central Asia
+      - Hydrogen storage technology
+      - Medical epidemiology
+      - Practical cryptography
+      - Memorial book The gypsies at Auschwitz-Birkenau
+      - Knowledge management case book
+      - Improving survey methods
+      - Blockchain Driven Supply Chains and Enterprise Information Systems
+      - Ecotourism and conservation in the Americas
+      - Animal feed science and nutrition
+      - Food systems resilience
+      - The blue fairy book
+      - The violet fairy book
+      - Clinical concepts and practical management techniques in dentistry
+      - Current Challenges in Architecture and Urbanism in Albania
+      - Peer Gynt's onion
+      - Biochemical testing
+      - Meteorology: Book I
+      - The case book of Sherlock Holmes
+      - Informed Urban Environments
+      - Resilient Smart Cities
+      - Critical Planning and Design
+      - World Internet Development Report 2018
+      - Digital Manufacturing
+      - Data mining
+      - Fuzzy Logic
+      - Flip chart magic!
+      - Doing business in India
+      - The Geography of Albania
+      - Library of history, Book XVI, chapter 14, The battle of Chaeronea
+      - A book of nonsense
+      - Cross-cultural analysis
+      - Prebiotics and probiotics
+      - Design for Vulnerable Communities
+      - Britannica book of the year
+      - Artificial Intelligence
+      - Machinery's handbook
+      - Nitrogen fixation
+      - Phenolic compounds
+      - Flavonoids
+      - Historic Cities in the Face of Disasters
+      - Big data
+      - Book 1
+      - Book 2
+      - The englishwoman's year book and directory
+      - Problems on Algorithms
+      - Competence-based innovation in hospitality and tourism
+      - A little book of eternal wisdom
+      - Archaeology of the Hunter-Gatherers of the Central Mountains of Tierra del Fuego
+      - Bioluminescence
+      - Proceedings of the 4th Global Summit of Research Institutes for Disaster Risk Reduction
+      - Vitamin K
+      - Urban Design in Seismic-Prone Regions
+      - The widow and her son
+      - Island tourism
+      - 2019-20 MATRIX Annals
+      - Swarm intelligence
+      - Data analytics and AI
+      - Machine learning
+      - Chikungunya virus
+      - Emerging Topics in Modeling Interval-Censored Survival Data
+      - The Geography of Contemporary China
+      - HIT or Miss for the Student
+      - Neurotechnology for biomimetic robots
+      - Maps of Quality of Life in Argentina Since the 19th Century
+      - The book of tea
+      - Sustainability and management
+      - Vitamin A
+      - Alginates
+      - The Geography of Uzbekistan
+      - The Westside Barbell book of methods
+      - Oxidoreductase
+      - Ecosystem-Based Disaster and Climate Resilience
+      - Ship Operation Technology
+      - Advances and applications in deep learning
+      - Glutathione system and oxidative stress in health and disease
+      - Self-driving vehicles and enabling technologies
+      - Hidden Geographies
+      - The woman suffrage year book
+      - Pectins
+      - Chemical properties of starch
+      - Starch
+      - The big book of virtual teambuilding games
+      - British festivals
+      - DNA methylation mechanism
+      - The marketing book
+      - Urban Crime Prevention
+      - Keratin
+      - Plant stress physiology
+      - Persistent Organic Pollutants (POPs)
+      - Fibroblasts
+      - Essential oils
+      - Leadership in a changing world
+      - Big data-enabled internet of things
+      - The book of Job
+      - Human microbiome
+      - Ligeti’s Macroharmonies
+      - Pneumonia
+      - Germany
+      - The future of health economics
+      - Fourth Places
+      - The Internet of Things and Big Data Analytics
+      - Periodontology
+      - Vitamin E in health and disease
+      - Benzimidazole
+      - Nature-based tourism, environment, and land management
+      - Protein kinases
+      - Environmental impacts of ecotourism
+      - Extracellular matrix
+      - Oral health by using probiotic products
+      - Lean system management for leaders
+      - Reactive oxygen species
+      - The nature of cognition
+      - Vagueness
+      - Quality assurance and certification in ecotourism
+      - The jungle book
+      - The second jungle book
+      - First book of Adam and Eve
+      - American hand book of the daguerreotype
+      - Hydrolases
+      - Rabies virus at the beginning of 21st Century
+      - Understanding Emergent Urbanism
+      - Young adventure
+      - Assessment in Geographical Education: An International Perspective
+      - The Soils of Oregon
+      - Music and messaging in the African political arena
+      - Brain-computer interface
+      - Digital Design Techniques and Exercises
+      - Oil and Natural Gas Economy in Argentina
+      - Biochemistry and health benefits of fatty acids
+      - Urban Morphology
+      - Metabolomics
+      - A royal pet
+      - A Sunday in London
+      - Christmas
+      - Christmas Day
+      - Christmas Eve
+      - Little Britain
+      - London antiques
+      - Philip of Pokanoket, an Indian memoir
+      - Rip Van Winkle
+      - Roscoe
+      - Rural funerals
+      - Rural life in England
+      - Stratford-on-Avon
+      - The art of book-making
+      - The author's account of himself
+      - The broken heart
+      - The Christmas dinner
+      - The country church
+      - The inn kitchen
+      - The sketch book of Geoffrey Crayon, gent
+      - The spectre bridegroom
+      - The stage coach
+      - The voyage
+      - The wife
+      - Traits of Indian character
+      - Westminster Abbey
+      - Advances and Innovations in Statistics and Data Science
+      - Rethinking organizational diversity, equity, and inclusion
+      - International business in Latin America
+      - Aflatoxin B1 occurrence, detection and toxicological effects
+      - Cell culture
+      - Ubiquitin
+      - Environmental Sustainability in Building Design and Construction
+      - Conserving and Managing Historical Urban Landscape
+      - Senior Design Projects in Mechanical Engineering
+      - Animal reproduction
+      - Protein detection
+      - CRC handbook of chemistry and physics
+      - Latin Vulgate book titles & names
+      - PASS Cambridge BEC Higher
+      - The yellow fairy book
+      - Handbook of research on digital citizenship and management during crises
+      - Management consultancy insights and real consultancy projects
+      - Applied social science approaches to mixed methods research
+      - Memory, identity, and nationalism in European regions
+      - Smithells metals reference book
+      - Optimizing student engagement in online learning environments
+      - Fuzzy expert systems for disease diagnosis
+      - Challenges to integrating diversity, equity, and inclusion programs in organizations
+      - Network security technologies
+      - Critical examinations of distance education transformation across disciplines
+      - Reforming teacher education for online pedagogy development
+      - Urban geography in postcolonial Zimbabwe
+      - The business model book
+      - Information seeking behavior and challenges in digital libraries
+      - Analyzing current and future global trends in populism
+      - Cambridge English empower advanced
+      - Innovative solutions for access control management
+      - Impacts of climate change on agriculture and aquaculture
+      - Design and investment of high voltage nanodielectrics
+      - Emerging nanotechnology applications in electrical engineering
+      - Effective solutions to pollution mitigation for public welfare
+      - Impact of global issues on international trade
+      - Measuring the validity of usage reports provided by e-book vendors
+      - Advancements in fuzzy reliability theory
+      - The customer experience book
+      - Evaluating media richness in organizational learning
+      - Digital solutions and the case for Africa's sustainable development
+      - Healthcare administration for patient safety and engagement
+      - Advanced fashion technology and operations management
+      - The life and afterlife of gay neighborhoods
+      - Computer-mediated briefing for architects
+      - The soils of Aotearoa New Zealand
+      - Geospatial technologies in urban system development
+      - International express
+      - Student culture and identity in higher education
+      - Arabidopsis book
+      - Production, properties, and applications of high temperature coatings
+      - Integration challenges for analytics, business intelligence, and data mining
+      - Smart cities, citizen welfare, and the implementation of sustainable development goals
+      - Economic modeling, analysis, and policy for sustainability
+      - The big book of simulation modeling
+      - Technology management in organizational and societal contexts
+      - Blue fairy book
+      - The red fairy book
+      - Company to company
+      - The violence-free workplace
+      - Creative technologies for multidisciplinary applications
+      - Changing urban landscapes through public higher education
+      - Managing big data integration in the public sector
+      - Moving into mechanical engineering
+      - Organizational culture and ethics in modern medicine
+      - Ready to order
+      - Information security in diverse computing environments
+      - Pass Cambridge BEC Preliminary
+      - Objective proficiency
+      - Speakout advanced
+      - Nascent entrepreneurship and successful new venture creation
+      - Exploring innovative and successful applications of soft computing
+      - Ethical issues in social work practice
+      - Advanced research on nanotechnology for civil engineering applications
+      - Cases on quality initiatives for organizational longevity
+      - Circular economy and re-commerce in the fashion industry
+      - The secret book
+      - Toxicity and waste management using bioremediation
+      - Advanced numerical simulations in mechanical engineering
+      - Organizational change management strategies in modern business
+      - Advanced treatment techniques for industrial wastewater
+      - Financial entrepreneurship for economic growth in emerging nations
+      - Agricultural finance and opportunities for investment and expansion
+      - Electrical engineering textbook
+      - New inside out
+      - Reputation management techniques in public relations
+      - Outlooks and opportunities in blended and distance learning
+      - Global trends in intelligent computing research and development
+      - Innovative applications of nanowires for circuit design
+      - Essential telephoning in English
+      - The complete lean enterprise
+      - Communicating project management
+      - High performance SQL server
+      - Redefining theory and practice to guide social transformation
+      - Mobilities in India
+      - Transforming the internet of things for next-generation smart systems
+      - Software engineering with UML
+      - New headway pronunciation course
+      - Market leader
+      - Creating personal, social, and urban awareness through pervasive computing
+      - The Basics of Filmmaking
+      - Computational intelligence in remanufacturing
+      - Assistive technology research, practice, and theory
+      - English 365
+      - Effective methods for software engineering
+      - Transforming gaming and computer simulation technologies across industries
+      - Complete guide to the TOEIC Test
+      - Regaining global stability after the financial crisis
+      - Comparative economics and regional development in Turkey
+      - Computational tools and techniques for biomedical signal processing
+      - The Presidents report
+      - Enhancing competitive advantage with dynamic management and engineering
+      - Shifting to online learning through faculty collaborative support
+      - English for business studies in higher education studies
+      - On point
+      - Impact of industry 4.0 on architecture and cultural heritage
+      - Ensuring research integrity and the ethical management of data
+      - Theoretical and practical approaches to social innovation
+      - Re-envisioning and restructuring blended learning for underprivileged communities
+      - A book of scoundrels
+      - Cloud computing systems and applications in healthcare
+      - Green accounting initiatives and strategies for sustainable development
+      - The big book of Six Sigma training games
+      - Understanding extrusion
+      - Face2face
+      - Intelligent business
+      - Electromagnetic compatibility for space systems design
+      - Game theory framework applied to wireless communication networks
+      - Strategies for attracting, maintaining, and balancing a mature workforce
+      - Volunteered geographic information and the future of geospatial data
+      - English for academic study: listening
+      - The project book
+      - Transformative curriculum design in health sciences education
+      - Year book Australia
+      - Australia and New Zealand
+      - The psychology book
+      - The science book
+      - The business book
+      - The economics book
+      - Securing the cloud
+      - A project manager's book of forms
+      - A project manager's book of tools and techniques
+      - Tools for mobile multimedia programming and development
+      - Ethics of hospitality
+      - Integrating technology in positive psychology practice
+      - Shopping for good
+      - Technical English
+      - Pronunciation for advanced learners of English
+      - Technical English for beginners
+      - Business class
+      - Market leader upper intermediate
+      - The ultimate job hunting book
+      - Take-off
+      - Multicultural andragogy for transformative learning
+      - Introduction to project management
+      - Data science and simulation in transportation research
+      - Therapeutic jurisprudence and overcoming violence against women
+      - Green approaches to biocomposite materials science and engineering
+      - Theoretical and practical advancements for fuzzy system integration
+      - Economic reforms for global competitiveness
+      - Enhancing academic research with knowledge management principles
+      - Cases on communication disorders in culturally diverse populations
+      - Big Data in small slices
+      - Emerging design solutions in structural health monitoring systems
+      - Network security attacks and countermeasures
+      - Comparative perspectives on global corporate social responsibility
+      - Emerging research on networked multimedia communication systems
+      - Solar concentrating modules with louvered heliostats
+      - Contemporary politics, communication, and the impact on democracy
+      - Feral information systems development
+      - Current and prospective applications of virtual reality in higher education
+      - Evolution and standardization of mobile communications technology
+      - Writing Sentences
+      - Writing Essays
+      - Writing Paragraphs
+      - The cloud computing book
+      - Academic knowledge construction and multimodal curriculum development
+      - Mobile pedagogy and perspectives on teaching and learning
+      - Integrating business management processes, Volume 1: Management and core processes
+      - Integrating business management processes, Volume 2: Support and assurance processes
+      - Advanced expert CAE
+      - English for international negotiations
+      - Public health genomics and international wealth creation
+      - Using decision support systems for transportation planning efficiency
+      - Smart technologies in healthcare
+      - CDC Yellow book 2020
+      - Engineering-medicine
+      - The three taverns
+      - The silent language
+      - The Pfeiffer book of successful team-building tools
+      - BTEC National Applied Psychology Student Book
+      - Across cultures
+      - Global development of religious tourism
+      - The presentation book
+      - Governance of climate responsive cities
+      - Developing effective communication skills in archaeology
+      - Basic English for computing
+      - Oxford English for information technology
+      - Oxford English for electrical and mechanical engineering
+      - Technology
+      - Technology for engineering & applied sciences
+      - Impacts of violent conflicts on resource control and sustainability
+      - Advanced manufacturing techniques using laser material processing
+      - Statistics
+      - Pattern recognition and classification in time series data
+      - Ethical standards and practice in international relations
+      - Data envelopment analysis and effective performance assessment
+      - Driving green consumerism through strategic sustainability marketing
+      - Persian paradises at peril
+      - Physics.
+      - Speakout upper intermediate
+      - Be my guest
+      - Global implications of emerging technology trends
+      - Systems research for real-world challenges
+      - Design solutions for improving website quality and effectiveness
+      - Assessment tools for mapping learning outcomes with learning objectives
+      - Agricultural management strategies in a changing economy
+      - Emerging theory and practice in neuroprosthetics
+      - Global perspectives on development administration and cultural change
+      - Augmented reality for enhanced learning environments
+      - Introduction to light emitting diode technology and applications
+      - Developing organizational maturity for effective project management
+      - Pearson BTEC National travel and tourism student book
+      - Travel & tourism
+      - Integrating art and creativity into business practice
+      - Machine learning applications in non-conventional machining processes
+      - Writing extra
+      - New Insights into business
+      - Tactics for TOEIC
+      - Data infrastructure management
+      - Transformative healthcare practice through patient engagement
+      - Cultural influences on architecture
+      - Gender and diversity representation in mass media
+      - Identification, evaluation, and perceptions of distance education experts
+      - Computational statistics
+      - Business Benchmark
+      - Examining quantum algorithms for quantum image processing
+      - The soils of Libya
+      - Petrochemical catalyst materials, processes, and emerging technologies
+      - Technological breakthroughs in modern wireless sensor applications
+      - English for tourism and hospitality in higher education studies
+      - Moving into tourism & hospitality
+      - The Geography of Bosnia and Herzegovina
+      - Blockchain applications in IoT security
+      - Global perspectives on religious tourism and pilgrimage
+      - Indigenous ecotourism
+      - Disability and equity in higher education accessibility
+      - Managing
+      - Express your Genius
+      - Social network analytics for contemporary business organizations
+      - Applications of artificial neural networks for nonlinear data
+      - Proceedings of the 3rd global summit of research institutes for disaster risk reduction
+      - Transforming urban nightlife and the development of smart public spaces
+      - Innovative techniques and applications of entity resolution
+      - Innovations
+      - English for Business Life
+      - English for business studies
+      - Handbook of research on global aspects of sustainable finance in times of crises
+      - Strategic learning ideologies in prison education programs
+      - Annual announcement
+      - Learner experience and usability in online education
+      - RFID technology integration for business performance improvement
+      - Applied ethics in a digital world
+      - Data book
+      - Digital entrepreneurship and global innovation
+      - Accountancy and the changing landscape of integrated reporting
+      - Experimental multimedia systems for interactivity and strategic innovation
+      - Business Partner B2
+      - Pole dance fitness
+      - Emerging developments and practices in oncology
+      - Progressive engineering practices in marine resource management
+      - English for science and engineering
+      - Market leader advanced
+      - Innovations in measuring and evaluating scientific information
+      - Newnes mathematics pocket book for engineers
+      - Documentary editing
+      - Emerging innovations in microwave and antenna engineering
+      - The cover letter book
+      - The CV book
+      - The interview book
+      - The interview question & answer book
+      - Britain
+      - IELTS Graduation
+      - Handbook of research on inventive bioremediation techniques
+      - Optimizing medicine residency training programs
+      - Effective writing
+      - The business student's phrase book
+      - The student phrase book
+      - Strategies for student support during a global crisis
+      - Tools and techniques for economic decision analysis
+      - Addressing issues of systemic racism during turbulent times
+      - BTEC tech award: sport, activity and fitness
+      - Effective meetings
+      - Basic technical English
+      - Philosophical perceptions on logic and order
+      - Integrating cognitive architectures into virtual character design
+      - The nonprofit risk book
+      - Curriculum development for gifted education programs
+      - Applications of conscious innovation in organizations
+      - New aesthetic thought, methodology, and structure of systemic philosophy
+      - Cases on human performance improvement technologies
+      - Programming Rust
+      - Adobe Dreamweaver 2020 release
+      - Target cost management
+      - Ontologies and big data considerations for effective intelligence
+      - English for academic study: speaking & pronunciation
+      - Spatial analysis techniques using MyGeoffice
+      - The business
+      - The business 2.0
+      - Mathematics pocket book for engineers and scientists
+      - Safety first
+      - Success with BEC vantage
+      - Success with business
+      - English for academic study: reading & writing
+      - Advanced calculus
+      - Using R for introductory statistics
+      - Information technology applications for crisis response and management
+      - Business Advantage
+      - Theurban transformation of Sarajevo
+      - Cases on digital strategies and management issues in modern organizations
+      - Applying business intelligence to clinical and healthcare organizations
+      - Quality management for competitive advantage in global markets
+      - Special library administration, standardization and technological integration
+      - Understanding Ubuntu for enhancing intercultural communications
+      - Business ethics
+      - Handbook of research on Geospatial science and technologies
+      - Emerging perspectives on the mobile content evolution
+      - Cases on STEAM education in practice
+      - Dealing with stress in a modern work environment
+      - Modern perspectives on virtual communications and social networking
+      - Design and optimization of mechanical engineering products
+      - EHT transmission performance evaluation
+      - Multidimensional perspectives on principal leadership effectiveness
+      - Effective standardization management in corporate settings
+      - Next generation wireless network security and privacy
+      - Cloud computing technologies for green enterprises
+      - Security management in mobile cloud computing
+      - Business result - Advanced
+      - Strategies for innovators
+      - English for academic purposes
+      - Positioning and navigation in complex environments
+      - The CDA TM book
+      - Advancing medicine through nanotechnology and nanomechanics applications
+      - Practice and progress in social design and sustainability
+      - Administrative leadership in open and distance learning programs
+      - Intelligent technologies and techniques for pervasive computing
+      - The antiracist world language classroom
+      - Developing creative economy through disruptive leadership
+      - Quality innovation
+      - Assistive technologies for physical and cognitive disabilities
+      - Global intermediation and logistics service providers
+      - Working in English
+      - Let's talk
+      - Welcome!
+      - New international business English
+      - Cambridge IGCSE physical education
+      - Engineering 1
+      - Academic library development and administration in China
+      - Direct to TOEFL ® iBT
+      - Contemporary approaches and strategies for applied logistics
+      - Introductory statistics for the health sciences
+      - New headway English course
+      - Methods and paradigms in education research
+      - Achieve IELTS 2
+      - Louisiana employment and wages
+      - Maintaining sustainable accounting systems in small business
+      - The ultimate interview book
+      - Promoting climate change awareness through environmental education
+      - English for mechanical engineering B2
+      - Innovative perspectives on tourism discourse
+      - The role of islamic spirituality in the management and leadership process
+      - Engineering creative design in robotics and mechatronics
+      - Destination B2
+      - Optimal inventory control and management techniques
+      - Soft computing techniques and applications in mechanical engineering
+      - Applied big data analytics in operations management
+      - Design and modeling of low power VLSI systems
+      - Applying neuroscience to business practice
+      - Empirical research on semiotics and visual rhetoric
+      - Optimum decision making in asset management
+      - Face recognition in adverse conditions
+      - The economics of climate change in Argentina
+      - Business Partner C1
+      - Uncertainties and risk assessment in trade relations
+      - Value relevance of accounting information in capital markets
+      - Developing effective educational experiences through learning analytics
+      - English pronunciation in use
+      - Cambridge English for engineering
+      - In company - Intermediate
+      - The big book of meeting games
+      - Accounting information systems
+      - Analyzing the economics of financial market infrastructures
+      - Cambridge Academic English, Advanced
+      - Cambridge Academic English, Upper intermediate
+      - English for health sciences
+      - Modeling and simulation techniques for improved business processes
+      - Mechanics of robotic manipulation
+      - The strategy book
+      - Promoting global competencies through media literacy
+      - Lean technical communication
+      - Motivationally intelligent leadership
+      - Social media performance evaluation and success measurements
+      - Business result - Upper-intermediate
+      - On competition
+      - Oxford English grammar course
+      - Sustainable nanosystems development, properties, and applications
+      - Quantum and optical dynamics of matter for nanotechnology
+      - Management and participation in the public sphere
+      - Applying big data analytics in bioinformatics and medicine
+      - Technology enhanced learning
+      - Knowledge management strategies
+      - Cultural urban heritage
+      - Emerging research on bioinspired materials engineering
+      - Multinational enterprise management strategies in developing countries
+      - Diverse contemporary issues facing business management education
+      - Critical concepts, standards, and techniques in cyber forensics
+      - Fostering communication and learning with underutilized technologies in higher education
+      - Transforming public health in developing nations
+      - Harnessing human capital analytics for competitive advantage
+      - Optoelectronics in machine vision-based theories and applications
+      - Cognitive radio sensor networks
+      - Project management planning
+      - Operation, construction, and functionality of direct rurrent machines
+      - Critical approaches to information retrieval research
+      - Impact of infodemic on organizational performance
+      - The principles of thermodynamics
+      - Advanced image processing techniques and applications
+      - Advanced methods for complex network analysis
+      - Applied aspects of optical communication and LIDAR
+      - Emerging innovations in wireless networks and broadband technologies
+      - Stochastic processes and models in operations research
+      - Management education for global leadership
+      - Knowledge integration strategies for entrepreneurship and sustainability
+      - A people's history of the Russian Revolution
+      - Tourism, cultural heritage and urban regeneration
+      - The Kubernetes book
+      - Progressive trends in electronic resource management in libraries
+      - World politics and the challenges for international security
+      - Forest fire danger prediction using deterministic-probabilistic approach
+      - Building equitable access to knowledge through open access repositories
+      - Classification and clustering in biomedical signal processing
+      - Feature detectors and motion detection in video processing
+      - Applied video processing in surveillance and monitoring systems
+      - Managing diversity, innovation, and infrastructure in digital business
+      - Business infrastructure for sustainability in developing economies
+      - Optimizing health monitoring systems with wireless technology
+      - Energy-efficient underwater wireless communications and networking
+      - Ethical research approaches to indigenous knowledge education
+      - United Kingdom input-output analyses
+      - United Kingdom balance of payments
+      - Cases on leadership in adult education
+      - Redefining translation and interpretation in cultural evolution
+      - Developing and applying optoelectronics in machine vision
+      - Ideological messaging and the role of political literature
+      - Environmental impacts on underground power distribution
+      - The workshop book
+      - Sustaining power resources through energy optimization and engineering
+      - Microbial biotechnology in environmental monitoring and cleanup
+      - Collaborative knowledge in scientific research networks
+      - Increasing productivity and efficiency in online teaching
+      - English for medicine in higher education studies
+      - The little black book of change
+      - Software testing
+      - Success with BEC higher
+      - Success with BEC preliminary
+      - Business English handbook
+      - Matter and consciousness
+      - Visual ethics
+      - The soils of Nevada
+      - Interdisciplinary perspectives on contemporary conflict resolution
+      - Applied big data analytics and its role in COVID-19 research
+      - The fifth discipline fieldbook
+      - Global business leadership development for the fourth industrial revolution
+      - Machine learning and its applications
+      - Automated enterprise systems for maximizing business performance
+      - Transformative practice and research in organizational communication
+      - Modeling and simulation techniques in structural engineering
+      - Integration and implementation of the Internet of things through cloud computing
+      - Molecular plant breeding and genome editing tools for crop improvement
+      - Electrical engineering
+      - GEO year-book
+      - The Design Hotels book
+      - Contemporary applications of mobile computing in healthcare settings
+      - Emergent research on polymeric and composite materials
+      - Elements of Synthesis Planning
+      - Detecting and mitigating robotic cyber security risks
+      - Novel approaches for drug Delivery
+      - Recent advances in drug delivery technology
+      - Environmental issues surrounding human overpopulation
+      - Applying predictive analytics within the service sector
+      - Processing techniques and tribological behavior of composite materials
+      - Strategic management of sustainable manufacturing operations
+      - Strategies for business sustainability in a collaborative economy
+      - Convergence of broadband, broadcast, and cellular network technologies
+      - FCE Gold Plus
+      - Accelerated opportunity education models and practices
+      - Energetic materials research, applications, and new technologies
+      - Structural stability and morphogenesis
+      - Exploring transmedia journalism in the digital age
+      - The hedge fund book
+      - Exploring multimodal composition and digital writing
+      - Evolving multicultural education for global classrooms
+      - English for environmental science in higher education studies
+      - Collaboration and student engagement in design education
+      - Teaching research methods in public administration
+      - The Python book
+      - Design solutions and innovations in temporary structures
+      - Geocomputation with R
+      - Tourism
+      - Applied behavioral economics research and trends
+      - English for electrical engineering in higher education studies
+      - The green six sigma handbook
+      - An integrated introduction to computer graphics and geometric modeling
+      - Small Town Tourism in South Africa
+      - English for nursing
+      - The soils of Nepal
+      - The retail start-up book
+      - Transitioning from globalized to localized and self-reliant economies
+      - Progress to vantage
+      - International business ethics and growth opportunities
+      - The soils of Japan
+      - Challenges and opportunities of open educational resources management
+      - Multidisciplinary approach to modern digital steganography
+      - Managerial approaches toward queuing systems and simulations
+      - Medicine
+      - Interdisciplinary approaches to spatial optimization issues
+      - Employment protection legislation in emerging economies
+      - Green production strategies for sustainability
+      - Confluence of AI, machine, and deep learning in cyber forensics
+      - Infotech
+      - Diasporas and transnational entrepreneurship in global contexts
+      - Further ahead
+      - Recent advancements in bioremediation of metal contaminants
+      - Multidisciplinary perspectives in cryptology and information security
+      - Contemporary ethical issues in engineering
+      - Applied chaos and complexity theory in education
+      - Educational development and infrastructure for immigrants and refugees
+      - Social considerations of migration movements and immigration policies
+      - Curriculum internationalization and the future of education
+      - Advanced solid catalysts for renewable energy production
+      - Pass Cambridge BEC Vantage
+      - Skillful - listening & speaking
+      - Skillful - reading & writing
+      - IntechOpen book series. Environmental sciences
+      - IntechOpen book series. Biochemistry
+      - IntechOpen book series. Dentistry
+      - IntechOpen book series. Infectious diseases
+      - IntechOpen book series. Artificial intelligence
+      - IntechOpen book series. Veterinary medicine and science
+      - IntechOpen book series. Business, management and economics
+      - IntechOpen book series. Physiology
+      - IntechOpen book series. Sustainable development
+      - Online banking security measures and data protection
+      - Design strategies and innovations in multimedia presentations
+      - Methods for analyzing and leveraging online learning data
+      - Remote workforce training
+      - Social media data extraction and content analysis
+      - Modern industrial services
+      - Innovative solutions for building community in academic libraries
+      - Book-keeping and accounts
+      - Handmade teaching materials for students with disabilities
+      - Intelligent analysis of multimedia information
+      - Intelligent Multidimensional Data Clustering and Analysis
+      - The picture book of quantum mechanics
+      - In company - pre-intermediate
+      - Le morte Darthur ; Vol. 1
+      - Le morte Darthur ; Vol. 2
+      - Funding challenges and successes in arts education
+      - Promoting global environmental sustainability and cooperation
+      - Mobile application development, usability, and security
+      - Ecotourism in Scandinavia
+      - New methods and paradigms for modeling dynamic processes based on cellular automata
+      - Business proficiency
+      - BTEC tech award: travel and tourism
+      - Digital compositing for film and video
+      - Effective techniques for managing trigeminal neuralgia
+      - Creating teacher immediacy in online learning environments
+      - Innovations in digital branding and content marketing
+      - Focus on IELTS
+      - First insights into business
+      - Human resource management practices for promoting sustainability
+      - Slum development in India
+      - Applying nanotechnology for environmental sustainability
+      - The dialectics of urban and architectural boundaries in the Middle East and the Mediterranean
+      - Content generation through narrative communication and simulation
+      - Computational and cognitive approaches to narratology
+      - Leading schools with social, emotional, and academic development (SEAD)
+      - Interdisciplinary digital preservation tools and technologies
+      - Utilizing consumer psychology in business strategy
+      - The art book
+      - Driving agribusiness with technology innovations
+      - The benchmarking book
+      - Sustainable logistics and strategic transportation planning
+      - Book research quarterly
+      - The Book of Mormon
+      - Holy Grail
+      - Highly recommended 2
+      - Statistical abstract of the United States
+      - Artificial intelligence applications in distance education
+      - Global adaptations of community college infrastructure
+      - Let's enjoy English
+      - Video surveillance techniques and technologies
+      - Quick work
+      - Tech talk
+      - Critical theory and transformative learning
+      - Scholarly publishing and research methods across disciplines
+      - Recent advances in intelligent technologies and information systems
+      - Collaborative filtering using data mining and analysis
+      - Computational techniques for modeling atmospheric processes
+      - Pattern and data analysis in healthcare settings
+      - Bridges
+      - Contemporary knowledge and systems science
+      - Crowdfunding for sustainable entrepreneurship and innovation
+      - Numerical mathematics and computing
+      - Improving information security practices through computational intelligence
+      - Environmental sustainability and climate change adaptation strategies
+      - Biomedical computing for breast cancer detection and diagnosis
+      - Big data management, technologies, and applications
+      - Write to be read
+      - Project Management for Performance Improvement Teams
+      - Information quality and governance for business intelligence
+      - Statistical methods for global health and epidemiology
+      - Revolutionizing enterprise interoperability through scientific foundations
+      - Big data applications in the telecommunications industry
+      - Optimizing assistive technologies for aging populations
+      - Critical developments and applications of swarm intelligence
+      - Emerging research on swarm intelligence and algorithm optimization
+      - Strategic approaches to digital platform security assurance
+      - Network attacks and defenses
+      - Business English certificate
+      - Energy English
+      - Academic listening encounters
+      - AIDS book review journal
+      - Anil Aggrawal's internet journal of book reviews
+      - Bank and Thrift Branch Office data book
+      - Book-lore
+      - Bookworm
+      - China Internet Development Report 2019
+      - China Internet Development Report 2020
+      - China’s e-Science Blue Book 2018
+      - China’s e-Science Blue Book 2020
+      - Communicating across cultures
+      - Dramatic notes
+      - Education review
+      - Good practice
+      - IELTS 14
+      - Leading Healthcare IT
+      - Logos
+      - Metaphysics ; Book I
+      - Oxford preparation course for the TOEIC test
+      - Oxford tactics for the TOEIC test
+      - Publishing history
+      - Publishing research quarterly
+      - The African book publishing record
+      - The bibliographer
+      - The bonefolder
+      - The book of common prayer
+      - The industrial ethernet book
+      - The Magnolia, or Southern monthly
+      - The yearbook of the National Council of Women of Canada
+      - The yellow book
+      - World Internet Development Report 2019
+      - World Internet Development Report 2020
+      - Year book of woman's work
+  
