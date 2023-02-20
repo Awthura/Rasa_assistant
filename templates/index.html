@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Günther</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .chatbot {
+            width: 500px;
+            height: 600px;
+            margin: 0 auto;
+			margin-top: 50px;
+            border-radius: 10px;
+            border: 1px solid gray;
+            padding: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        .chatbot-header {
+            background-color: transparent;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .chatbot-header h3 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        .chatbot-conversation {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 500px;
+            overflow-y: auto;
+        }
+
+        .chatbot-conversation li {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .chatbot-conversation .user {
+            float: right;
+            background-color: #007bff;
+            color: white;
+        }
+
+        .chatbot-conversation .bot {
+            float: left;
+            background-color: #f5f5f5;
+        }
+
+        .chatbot-conversation .user,
+        .chatbot-conversation .bot {
+            clear: both;
+        }
+
+        .chatbot-conversation .user p,
+        .chatbot-conversation .bot p {
+            padding: 5px;
+            margin: 0;
+        }
+
+        .chatbot-conversation .user::before,
+        .chatbot-conversation .bot::before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            position: relative;
+            top: -20px;
+        }
+
+        .chatbot-conversation .user::after,
+        .chatbot-conversation .bot::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .chatbot-conversation .user::before {
+            border-left: 10px solid #007bff;
+            right: -10px;
+        }
+
+        .chatbot-conversation .user::after {
+            border-right: 10px solid #007bff;
+            right: -9px;
+        }
+
+        .chatbot-conversation .bot::before {
+            border-right: 10px solid #f5f5f5;
+            left: -10px;
+        }
+
+        .chatbot-conversation .bot::after {
+            border-left: 10px solid #f5f5f5;
+            left: -9px;
+        }
+
+        .chatbot-footer {
+            background-color: transparent;
+            padding: 10px;
+            border-radius: 0 0 10px 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .chatbot-footer input {
+			width: 20em;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid gray;
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .chatbot-footer button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-left: 2em;
+            flex: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbot">
+        <div class="chatbot-header">
+            <h3>Günther</h3>
+        </div>
+        <ul class="chatbot-conversation">
+            <!-- The chatbot conversation will be dynamically added here -->
+        </ul>
+        <div class="chatbot-footer">
+            <form>
+                <input type="text" id="message-input" placeholder="Type your message here...">
+                <button class="btn" type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const conversation = document.querySelector('.chatbot-conversation');
+        const messageInput = document.querySelector('#message-input');
+        const form = document.querySelector('form');
+		
+		function ChatResponse (isUser, msg) {
+			cls = isUser ? "user" : "bot";
+			conversation.innerHTML += `<li class=${cls}><p>${msg}</p></li>`;
+			conversation.scrollTop = conversation.scrollHeight;
+			if (!isUser) 
+				window.speechSynthesis.speak(new SpeechSynthesisUtterance(msg));
+		}
+
+		const rasaAPI = async function handleClick(msg) {
+			// Clean up the relevant subjects in the message
+			msg = msg.replace('""', '').replace("''", "")
+			.replace("miscellaneous", "Miscellaneous")
+			.replace("business", "Business")
+			.replace("english", "English")
+			.replace("engineering", "Engineering")
+			
+			// Fetch the bot response
+			await fetch('http://localhost:5005/webhooks/rest/webhook', {
+				method: 'POST',
+				headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+				'charset':'UTF-8',
+				},
+				credentials: "same-origin",
+				body: JSON.stringify({ "sender": "user", "message": msg }),
+			})
+			.then(response => response.json())
+			.then((response) => {
+				if (response) {
+					response.forEach(element => {
+						ChatResponse(false, element["text"])
+					});
+				}
+			}) 
+		}
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const message = messageInput.value;
+			if (message === '') return;
+
+            messageInput.value = '';
+			ChatResponse(true, message);
+			rasaAPI(message);
+        });
+
+		setTimeout(() => ChatResponse(false, "Hello, how can I help you?") ,1000);
+    </script>
+</body>
+</html>
