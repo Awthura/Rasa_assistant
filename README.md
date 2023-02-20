@@ -16,7 +16,7 @@ More info about the design and documentation can be found in the [Wiki](https://
 	pip install -r requirements.txt
 
 # Usage
-Running the `main.py` file will open a local webserver at http://localhost:5000/ and spawn the rasa backend as a subprocess. This might take a minute to run so it is a good oppurtunity to grab another cup of coffee. The message `Rasa server is up and running` indicates that everything is fine and ready to use. <br> NOTICE: The program might not run at python installations higher than version 3.9. <br> NOTICE: The backend might not work on some installations of windows due to CORS issues. I recorded a [video](https://youtu.be/F-lMMT_KItg) of the frontend just in case it doesnt run because of browser security precautions. Also you can run it in the terminal by running `rasa run actions` first, then running `rasa shell` in a seperate terminal.
+Running the `main.py` file will open a local webserver at http://localhost:5000/ and spawn the rasa backend as a subprocess. This might take a minute to run so it is a good oppurtunity to grab another cup of coffee. The message `Rasa server is up and running` indicates that everything is fine and ready to use. <br> NOTICE: The program might not run at python installations higher than version 3.9. <br> NOTICE: The backend might not work on some installations of windows due to CORS issues. We recorded a [video](https://youtu.be/F-lMMT_KItg) of the frontend just in case it doesnt run because of browser security precautions. Also you can run it in the terminal by running `rasa run actions` first, then running `rasa shell` in a seperate terminal.
 
 # Implementation of the Exercises
 
