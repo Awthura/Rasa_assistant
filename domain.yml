@@ -1,0 +1,114 @@
+version: "3.1"
+intents:
+  - greet
+  - goodbye
+  - query_knowledge_base
+  - bot_challenge
+  - reserve
+  - opening_hours
+  - rules
+  - thank
+  - events
+
+entities:
+  - object_type
+  - mention
+  - attribute
+  - book
+  - category
+  - author
+  - name
+
+actions:
+  - action_query_knowledge_base
+
+responses:
+  utter_greet:
+  - text: "Hey!"
+  - text: "Hello! How can I help you?"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Goodbye. See you soon."
+
+  utter_ask_rephrase:
+  - text: "Sorry, I'm not sure I understand. Can you rephrase?"
+  - text: "Can you please rephrase? I did not got that."
+
+  utter_iamabot:
+  - text: "My name is Günther. I am your AI library assistant, powered by Rasa."
+  - text: "I am Günther, an AI powered by Rasa to assist you."
+
+  utter_reserve:
+  - text: "Sure, I will keep this book for you."
+
+  utter_opening_hours:
+  - text: "The library is open from 8:00 am to 10:00 pm on Weekdays and 6:00 pm on Saturdays. We are closed on Sundays & Public Holidays"
+
+  utter_thank:
+  - text: "You are welcome!"
+  - text: "My pleasure"
+
+  utter_events:
+  - text: "Currently, we don't have any upcoming events at the library. Please subscribe to the library email and we will let you know!"
+
+  utter_rules:
+  - text: " Please make sure you follow these rules & regulations. \n
+            1.  Books must be returned by the due date to avoid late fines. \n
+            2.  You have to leave your bag at the library entrance. \n
+            3.  Food and drinks are not allowed in the library. \n
+            4.  Quiet study is expected in designated areas. \n
+            5.  All library materials must be checked out before leaving the library. \n
+            6.  Use of cell phones should be on silent mode. \n
+            7.  No smoking or vaping on library property."
+
+slots:
+  object_type:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: object_type
+
+  mention:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: mention
+
+  attribute:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: attribute
+
+  book:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: book
+
+  category:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: category
+
+  author:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: author
+
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+
+session_config:
+  session_expiration_time: 60  # value in minutes
+  carry_over_slots_to_new_session: true

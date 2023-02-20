@@ -1,0 +1,21 @@
+language: en
+
+pipeline:
+  - name: "WhitespaceTokenizer"
+  - name: "RegexFeaturizer"
+    case_sensitive: False
+  - name: "LexicalSyntacticFeaturizer"
+  - name: "CountVectorsFeaturizer"
+  - name: "CountVectorsFeaturizer"
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: "DIETClassifier"
+    epochs: 50
+  - name: "EntitySynonymMapper"
+
+policies:
+  - name: RulePolicy
+  
+actions:
+  - actions.ActionMyKB
