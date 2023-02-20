@@ -1,10 +1,10 @@
+This is a joint university project between me and Derin Özön
+
 Özön, Derin, 22111170
 
 Thura, Aw, 22108220
 
-Project for Assistance Systems
-
-Günther the library bot
+# Günther the library bot
 
 https://mygit.th-deg.de/diminished7/sas-voice-assistant
 
