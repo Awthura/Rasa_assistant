@@ -1,8 +1,8 @@
 This is a joint university project between me and Derin Özön
 
-Özön, Derin, 22111170
+Özön, Derin, 
 
-Thura, Aw, 22108220
+Thura, Aw,
 
 # Günther the library bot
 
